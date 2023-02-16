@@ -1,13 +1,19 @@
 #include <unistd.h>
 
 /**
- * entry - main
- * prints an output to the console
- * return 1
+ * main - prints "and that piece of art is useful" - Dora Korpar, 2015-10-19,
+ *        followed by a new line, to the standard error.
+ *
+ * Return: 1 (Error)
  */
 int main(void)
 {
-	char msg[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	write(2, msg, sizeof(msg) - 1);
-	return 1;
+    const char *msg = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+    ssize_t len = sizeof(msg);
+
+    /* use the write function to print to stderr */
+    ssize_t ret = write(STDERR_FILENO, msg, len);
+    if (ret != len)
+        return (1);
+    return (0);
 }
