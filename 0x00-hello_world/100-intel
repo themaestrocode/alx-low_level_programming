@@ -1,0 +1,2 @@
+#!/bin/bash
+CFILE="${1%.*}"; gcc -S -masm=intel "$CFILE.c"; mv "$CFILE.s" "$CFILE.asm"
