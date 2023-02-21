@@ -1,5 +1,3 @@
-/* my header file that contains my functions */
-
 #include <unistd.h>
 
 /**
