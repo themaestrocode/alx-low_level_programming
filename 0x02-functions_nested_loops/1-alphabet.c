@@ -9,12 +9,7 @@
  */
 int main(void)
 {
-	char chars;
-
-	for (chars = 'a'; chars <= 'z'; chars++)
-		_putchar(chars);
-
-	_putchar('\n');
+	print_alphabet();
 
 	return (0);
 }
