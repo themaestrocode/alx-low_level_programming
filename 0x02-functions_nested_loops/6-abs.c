@@ -9,8 +9,9 @@
  * Return: the absolute value of the input
  *
  */
-int _abs(int n)
+int _abs(n)
 {
+	int n;
 	int a = abs(n);
 
 	return (a);
