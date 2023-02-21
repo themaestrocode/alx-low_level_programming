@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -15,7 +15,8 @@ int main(void)
 			sum += i;
 	}
 
-	_putchar(sum + '0');
+	printf("%d", sum);
+	_putchar('\n');
 
 	return (0);
 }
