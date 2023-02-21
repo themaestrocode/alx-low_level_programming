@@ -1,0 +1,15 @@
+#include "main.h"
+#include <math.h>
+
+/**
+ * _abs - prints the absolute value of an integer
+ *
+ * @n: return abs
+ *
+ * Return: the absolute value of the input
+ *
+ */
+int _abs(int n)
+{
+	return (abs(n));
+}
