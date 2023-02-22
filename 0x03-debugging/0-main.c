@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - Entry point (tests the postive or negative function)
+ * main - Entry point to test the function
  *
  * Return: 0 (success)
  */
