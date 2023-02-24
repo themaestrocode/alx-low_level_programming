@@ -27,6 +27,12 @@ int main(void)
 
 		if (five == 0)
 		{
+			if (counter == 100)
+			{
+				printf("Buzz");
+				continue;
+			}
+
 			printf("Buzz ");
 			continue;
 		}
