@@ -4,6 +4,7 @@
  * _strncat - concatenates n-bytes of src to dest
  * @dest: destination
  * @src: source
+ * @n: the buytes/bits from src to be contatenated
  * Return: dest (success)
  */
 char *_strncat(char *dest, char *src, int n)
