@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 /**
- * main- prints all the arguments received
+ * main - prints all the arguments received
  * @argc: argumenmt count
  * @argv: the arguments
- * Return: 0(sucess)
+ * Return: 0 (success)
  */
 int main(int argc, char *argv[])
 {
-	(void) argv;
+	(void) argc;
 
 	int i;
 
