@@ -8,8 +8,6 @@
  */
 int main(int argc, char *argv[])
 {
-	(void) argv;
-
 	int prod;
 
 	if (argc != 3)
