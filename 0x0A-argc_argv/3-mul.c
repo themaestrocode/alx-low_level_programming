@@ -15,9 +15,11 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+	else
+	{
+		prod = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", prod);
 
-	prod = atoi(argv[1]) * atoi(argv[2]);
-	printf("%d\n", prod);
-
-	return (0);
+		return (0);
+	}
 }
