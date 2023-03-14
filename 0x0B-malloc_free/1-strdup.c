@@ -22,14 +22,8 @@ char *_strdup(char *str)
 	if (new_str == NULL)
 		return (NULL);
 
-	while (i < len)
-	{
-		if (str[i] == '\0')
-			return (new_str);
-
-		new_str[i] = str[i];
+	while ((new_str[i] = str[i]) != '\0')
 		i++;
-	}
 
 	return (new_str);
 }
