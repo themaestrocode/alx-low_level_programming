@@ -6,7 +6,7 @@
  * argstostr - concatenates all the arguments to your prog
  * @ac: the arg count value
  * @av: the array of the string arguents
- * Return: 
+ * Return: str (success)
  */
 char *argstostr(int ac, char **av)
 {
