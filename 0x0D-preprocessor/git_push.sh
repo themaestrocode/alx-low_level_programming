@@ -11,4 +11,4 @@ git push
 
 echo -e "\ngit push successful"
 
-echo "Your commit message: $commit_message\n"
+echo -e "Your commit message: $commit_message\n"
