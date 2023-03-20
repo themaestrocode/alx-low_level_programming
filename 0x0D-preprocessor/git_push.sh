@@ -9,6 +9,6 @@ git commit -m "$commit_message"
 
 git push
 
-echo -e "\n\ngit push successful"
+echo -e "\ngit push successful"
 
-echo "Your commit message: $commit_message"
+echo "Your commit message: $commit_message\n"
