@@ -9,17 +9,15 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	const char *specifier;
 	char c, *s;
-	int i;
+	int i, it = 0;
 	float f;
 
 	va_start(ap, format);
-	specifier = format;
 
-	while (format != NULL && (*specifier != '\0'))
+	while (format != NULL && (format[it] != '\0'))
 	{
-		switch (*specifier)
+		switch (format[it])
 		{
 			case 'c':
 				c = va_arg(ap, int);
@@ -40,10 +38,10 @@ void print_all(const char * const format, ...)
 				printf("%s", s);
 				break;
 		}
-		specifier++;
-		if (*specifier != '\0' && (*specifier == 'c' ||
-					*specifier == 'i' || *specifier == 'f' || *specifier == 's'))
+		if (format[it] != '\0' && (format[it] == 'c' ||
+					format[it] == 'i' || format[it] == 'f' || format[it] == 's'))
 			printf(", ");
+		it++;
 	}
 	printf("\n");
 	va_end(ap);
