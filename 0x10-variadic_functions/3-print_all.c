@@ -1,49 +1,50 @@
 #include "variadic_functions.h"
 #include <stdarg.h>
 #include <stdio.h>
-#include <stdlib.h>
+
 /**
- * print_all - prints all arguments
- * @format: the argument specifier
+ * print_all - prints arguments of different data types
+ * @format: the data type specifier
  */
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	char *temp;
+	const char *specifier;
+	char c, *s;
 	int i;
+	float f;
 
 	va_start(ap, format);
-	while (format == NULL)
-		printf("\n");
-		return;
-	while (format[i])
+	specifier = format;
+
+	while (format != NULL && (*specifier != '\0'))
 	{
-		switch (format[i])
+		switch (*specifier)
 		{
 			case 'c':
-				printf("%c", (char) va_arg(ap, int));
+				c = va_arg(ap, int);
+				printf("%c", c);
 				break;
 			case 'i':
-				printf("%d", va_arg(ap, int));
+				i = va_arg(ap, int);
+				printf("%d", i);
 				break;
 			case 'f':
-				printf("%f", (float) va_arg(ap, double));
+				f = va_arg(ap, double);
+				printf("%f", f);
 				break;
 			case 's':
-				temp = va_arg(ap, char*);
-				if (temp != NULL)
-				{
-					printf("%s", temp);
-					break;
-				}
-				printf("(nil)");
+				s = va_arg(ap, char *);
+				if (s == NULL)
+					s = "(nil)";
+				printf("%s", s);
 				break;
 		}
-		if ((format[i] == 'c' || format[i] == 'i' || format[i] == 'f' ||
-					format[i] == 's') && format[(i + 1)] != '\0')
+		specifier++;
+		if (*specifier != '\0' && (*specifier == 'c' ||
+					*specifier == 'i' || *specifier == 'f' || *specifier == 's'))
 			printf(", ");
-		i++;
 	}
-	va_end(ap);
 	printf("\n");
+	va_end(ap);
 }
