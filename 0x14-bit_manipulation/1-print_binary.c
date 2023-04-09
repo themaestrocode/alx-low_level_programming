@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "main.h"
+
 /**
  * print_binary - prints the binary rep of an integer
  * @n: the integer to be converted to binary
@@ -13,7 +13,7 @@ void print_binary(unsigned long int n)
 	{
 		crnt = n >> 1;
 
-		if (current & 1)
+		if (crnt & 1)
 		{
 			_putchar('1');
 			bit_count++;
