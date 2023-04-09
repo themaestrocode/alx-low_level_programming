@@ -19,7 +19,9 @@ void print_binary(unsigned long int n)
 			bit_count++;
 		}
 		else if (bit_count)
+		{
 			_putchar('0');
+		}
 	}
 	if (!bit_count)
 		_putchar('0');
