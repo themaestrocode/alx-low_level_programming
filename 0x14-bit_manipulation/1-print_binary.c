@@ -1,26 +1,26 @@
 #include <stdio.h>
-
+#include "main.h"
 /**
  * print_binary - prints the binary rep of an integer
  * @n: the integer to be converted to binary
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int mask;
-	int bit_count;
+	unsigned long int crnt;
+	int i, bit_count = 0;
 
-	mask = 1ul << (sizeof(unsigned long int) * 8 - 1);
-	bit_count = sizeof(unsigned long int) * 8;
-
-	while (bit_count > 0)
+	for (i = 63; i >= 0; i--)
 	{
-		if ((n & mask) != 0)
-			printf("1");
-		else
-			printf("0");
+		crnt = n >> 1;
 
-		mask >>= 1;
-		bit_count--;
+		if (current & 1)
+		{
+			_putchar('1');
+			bit_count++;
+		}
+		else if (bit_count)
+			_putchar('0');
 	}
-	printf("\n");
+	if (!bit_count)
+		_putchar('0');
 }
